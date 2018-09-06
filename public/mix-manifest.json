@@ -1,0 +1,16 @@
+{
+    "/css/core.css": "/css/core.css",
+    "/js/core.js": "/js/core.js",
+    "/js/custom.js": "/js/custom.js",
+    "/css/pages/login.css": "/css/pages/login.css",
+    "/js/pages/home.js": "/js/pages/home.js",
+    "/css/pages/home.css": "/css/pages/home.css",
+    "/css/pages/airlineticket.css": "/css/pages/airlineticket.css",
+    "/js/pages/airlineticket.js": "/js/pages/airlineticket.js",
+    "/css/pages/dropticket.css": "/css/pages/dropticket.css",
+    "/js/pages/dropticket.js": "/js/pages/dropticket.js",
+    "/css/pages/travelticket.css": "/css/pages/travelticket.css",
+    "/js/pages/travelticket.js": "/js/pages/travelticket.js",
+    "/css/pages/hotelticket.css": "/css/pages/hotelticket.css",
+    "/js/pages/hotelticket.js": "/js/pages/hotelticket.js"
+}
