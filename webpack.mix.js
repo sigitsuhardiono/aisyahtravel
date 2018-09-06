@@ -145,3 +145,41 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
     'resources/assets/js/pages/hotelticket.script.js'
 ], 'public/js/pages/hotelticket.js');
+
+/*
+ |--------------------------------------------------------------------------
+ | Mix For Page rental ticket
+ |--------------------------------------------------------------------------
+ */
+
+mix.styles([
+    'resources/assets/css/daterangepicker/daterangepicker.css'
+], 'public/css/pages/rentalticket.css');
+
+mix.scripts([
+    'resources/assets/js/daterangepicker/daterangepicker.min.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
+    'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/pages/rentalticket.script.js'
+], 'public/js/pages/rentalticket.js');
+
+/*
+ |--------------------------------------------------------------------------
+ | Mix For Page paket ticket
+ |--------------------------------------------------------------------------
+ */
+
+mix.styles([
+    'resources/assets/css/daterangepicker/daterangepicker.css'
+], 'public/css/pages/paketticket.css');
+
+mix.scripts([
+    'resources/assets/js/daterangepicker/daterangepicker.min.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
+    'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/pages/paketticket.script.js'
+], 'public/js/pages/paketticket.js');

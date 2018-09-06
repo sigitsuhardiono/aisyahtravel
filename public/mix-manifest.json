@@ -12,5 +12,9 @@
     "/css/pages/travelticket.css": "/css/pages/travelticket.css",
     "/js/pages/travelticket.js": "/js/pages/travelticket.js",
     "/css/pages/hotelticket.css": "/css/pages/hotelticket.css",
-    "/js/pages/hotelticket.js": "/js/pages/hotelticket.js"
+    "/js/pages/hotelticket.js": "/js/pages/hotelticket.js",
+    "/css/pages/rentalticket.css": "/css/pages/rentalticket.css",
+    "/js/pages/rentalticket.js": "/js/pages/rentalticket.js",
+    "/css/pages/paketticket.css": "/css/pages/paketticket.css",
+    "/js/pages/paketticket.js": "/js/pages/paketticket.js"
 }

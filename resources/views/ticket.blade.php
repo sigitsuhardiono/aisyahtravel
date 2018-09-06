@@ -56,7 +56,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 mb-4">
-                <a href="index.html" class="text-dark">
+                <a href="{{url('ticket/rental')}}" class="text-dark">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <span class="material-icons md-48 " style="color:#e07ed1;">directions_car</span>
@@ -66,7 +66,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 mb-4">
-                <a href="index.html" class="text-dark">
+                <a href="index.html{{url('ticket/kai')}}" class="text-dark">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <span class="material-icons md-48 " style="color:#7b82e0;">directions_railway</span>
@@ -76,7 +76,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 mb-4">
-                <a href="index.html" class="text-dark">
+                <a href="{{url('ticket/pelni')}}" class="text-dark">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <span class="material-icons md-48 " style="color:#e0980b;">directions_boat</span>
@@ -86,7 +86,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-6 mb-4">
-                <a href="index.html" class="text-dark">
+                <a href="{{url('ticket/paket')}}" class="text-dark">
                     <div class="card h-100">
                         <div class="card-body text-center">
                             <span class="material-icons md-48 " style="color:#a7c3e0;">all_inbox</span>

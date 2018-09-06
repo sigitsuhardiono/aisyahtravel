@@ -7,6 +7,10 @@ use App\Airlineticket;
 use App\Drop;
 use App\Dropticket;
 use App\Hotelticket;
+use App\Paket;
+use App\Paketticket;
+use App\Rental;
+use App\Rentalticket;
 use App\Syshotel;
 use App\Travel;
 use App\Travelticket;
@@ -143,6 +147,65 @@ class TicketController extends Controller
         $req->session()->flash('success', 'Data has been added');
         return redirect('ticket/hotel');
     }
+
+    public function rental()
+    {
+        $data['rental'] = Rental::all();
+        return view('rentalticket', $data);
+    }
+
+    public function saverental(Request $req)
+    {
+        $userId                       = Auth::user()->id;
+        $rentalTicket                 = new Rentalticket();
+        $rentalTicket->name           = $req->name;
+        $rentalTicket->phone          = $req->phone;
+        $rentalTicket->travel         = $req->travel;
+        $rentalTicket->address        = $req->address;
+        $rentalTicket->destination    = $req->destination;
+        $rentalTicket->date_departure = $req->date;
+        $rentalTicket->pax            = $req->pax;
+        $rentalTicket->on_ticket      = $this->cleanNumeric($req->on_ticket);
+        $rentalTicket->nta            = $this->cleanNumeric($req->nta);
+        $rentalTicket->commission     = $this->cleanNumeric($req->commission);
+        $rentalTicket->payment        = $req->payment;
+        $rentalTicket->notes          = $req->notes;
+        $rentalTicket->sales          = $req->sales;
+        $rentalTicket->user_id        = $userId;
+        $rentalTicket->save();
+        $req->session()->flash('success', 'Data has been added');
+        return redirect('ticket/rental');
+    }
+
+    public function paket()
+    {
+        $data['paket'] = Paket::all();
+        return view('paketticket', $data);
+    }
+
+    public function savepaket(Request $req)
+    {
+        $userId                       = Auth::user()->id;
+        $paketTicket                 = new Paketticket();
+        $paketTicket->name           = $req->name;
+        $paketTicket->phone          = $req->phone;
+        $paketTicket->travel         = $req->travel;
+        $paketTicket->address        = $req->address;
+        $paketTicket->destination    = $req->destination;
+        $paketTicket->date_departure = $req->date;
+        $paketTicket->pax            = $req->pax;
+        $paketTicket->on_ticket      = $this->cleanNumeric($req->on_ticket);
+        $paketTicket->nta            = $this->cleanNumeric($req->nta);
+        $paketTicket->commission     = $this->cleanNumeric($req->commission);
+        $paketTicket->payment        = $req->payment;
+        $paketTicket->notes          = $req->notes;
+        $paketTicket->sales          = $req->sales;
+        $paketTicket->user_id        = $userId;
+        $paketTicket->save();
+        $req->session()->flash('success', 'Data has been added');
+        return redirect('ticket/paket');
+    }
+
 
     private function cleanNumeric($a)
     {
