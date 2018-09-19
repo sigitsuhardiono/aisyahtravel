@@ -27,6 +27,8 @@ Route::get('/ticket/rental', 'TicketController@rental');
 Route::post('/ticket/saverental', 'TicketController@saverental');
 Route::get('/ticket/kai', 'TicketController@kai');
 Route::post('/ticket/savekai', 'TicketController@savekai');
+Route::get('/ticket/pelni', 'TicketController@pelni');
+Route::post('/ticket/savepelni', 'TicketController@savepelni');
 Route::get('/ticket/paket', 'TicketController@paket');
 Route::post('/ticket/savepaket', 'TicketController@savepaket');
 

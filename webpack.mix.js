@@ -183,3 +183,41 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
     'resources/assets/js/pages/paketticket.script.js'
 ], 'public/js/pages/paketticket.js');
+
+/*
+ |--------------------------------------------------------------------------
+ | Mix For Page kai ticket
+ |--------------------------------------------------------------------------
+ */
+
+mix.styles([
+    'resources/assets/css/daterangepicker/daterangepicker.css'
+], 'public/css/pages/kaiticket.css');
+
+mix.scripts([
+    'resources/assets/js/daterangepicker/daterangepicker.min.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
+    'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/pages/kaiticket.script.js'
+], 'public/js/pages/kaiticket.js');
+
+/*
+ |--------------------------------------------------------------------------
+ | Mix For Page pelni ticket
+ |--------------------------------------------------------------------------
+ */
+
+mix.styles([
+    'resources/assets/css/daterangepicker/daterangepicker.css'
+], 'public/css/pages/pelniticket.css');
+
+mix.scripts([
+    'resources/assets/js/daterangepicker/daterangepicker.min.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
+    'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
+    'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/pages/pelniticket.script.js'
+], 'public/js/pages/pelniticket.js');

@@ -2131,20 +2131,6 @@
 });
 "use strict";
 $(document).ready(function () {
-    $("#payment").change(function () {
-        if($(this).val() == "BB/Hutang"){
-            $("#dataagen").css("display","inline");
-        }
-        else{
-            $("#dataagen").css("display","none");
-        }
-        if($(this).val() == "Debit" || $(this).val() == "TT"){
-            $("#daftarbank").css("display","inline");
-        }
-        else{
-            $("#daftarbank").css("display","none");
-        }
-    });
     $('#date').daterangepicker({
         singleDatePicker: true,
         timePicker: true,

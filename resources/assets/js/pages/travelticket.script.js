@@ -10,6 +10,21 @@ $(document).ready(function () {
         }
     });
 
+    $("#payment").change(function () {
+        if($(this).val() == "BB/Hutang"){
+            $("#dataagen").css("display","inline");
+        }
+        else{
+            $("#dataagen").css("display","none");
+        }
+        if($(this).val() == "Debit" || $(this).val() == "TT"){
+            $("#daftarbank").css("display","inline");
+        }
+        else{
+            $("#daftarbank").css("display","none");
+        }
+    });
+
     window.addEventListener('load', function() {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName('needs-validation');

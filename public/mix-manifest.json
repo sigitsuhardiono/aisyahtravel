@@ -16,5 +16,9 @@
     "/css/pages/rentalticket.css": "/css/pages/rentalticket.css",
     "/js/pages/rentalticket.js": "/js/pages/rentalticket.js",
     "/css/pages/paketticket.css": "/css/pages/paketticket.css",
-    "/js/pages/paketticket.js": "/js/pages/paketticket.js"
+    "/js/pages/paketticket.js": "/js/pages/paketticket.js",
+    "/css/pages/kaiticket.css": "/css/pages/kaiticket.css",
+    "/js/pages/kaiticket.js": "/js/pages/kaiticket.js",
+    "/css/pages/pelniticket.css": "/css/pages/pelniticket.css",
+    "/js/pages/pelniticket.js": "/js/pages/pelniticket.js"
 }

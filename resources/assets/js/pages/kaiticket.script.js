@@ -1,31 +1,12 @@
 "use strict";
 $(document).ready(function () {
-    $('#check_in').daterangepicker({
+    $('#date').daterangepicker({
         singleDatePicker: true,
+        timePicker: true,
+        timePicker24Hour: true,
+        timePickerIncrement: 10,
         locale: {
-            format: 'YYYY/MM/DD'
-        }
-    });
-    
-    $('#check_out').daterangepicker({
-        singleDatePicker: true,
-        locale: {
-            format: 'YYYY/MM/DD'
-        }
-    });
-
-    $("#payment").change(function () {
-        if($(this).val() == "BB/Hutang"){
-            $("#dataagen").css("display","inline");
-        }
-        else{
-            $("#dataagen").css("display","none");
-        }
-        if($(this).val() == "Debit" || $(this).val() == "TT"){
-            $("#daftarbank").css("display","inline");
-        }
-        else{
-            $("#daftarbank").css("display","none");
+            format: 'YYYY/MM/DD hh:mm'
         }
     });
 
