@@ -75,9 +75,9 @@ mix.scripts([
  | Mix For Page airline ticket
  |--------------------------------------------------------------------------
  */
-
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/airlineticket.css');
 
 mix.scripts([
@@ -86,6 +86,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/airlineticket.script.js'
 ], 'public/js/pages/airlineticket.js');
 
@@ -96,7 +98,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/dropticket.css');
 
 mix.scripts([
@@ -105,6 +108,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/dropticket.script.js'
 ], 'public/js/pages/dropticket.js');
 
@@ -115,7 +120,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/travelticket.css');
 
 mix.scripts([
@@ -124,6 +130,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/travelticket.script.js'
 ], 'public/js/pages/travelticket.js');
 
@@ -134,7 +142,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/hotelticket.css');
 
 mix.scripts([
@@ -143,6 +152,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/hotelticket.script.js'
 ], 'public/js/pages/hotelticket.js');
 
@@ -153,7 +164,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/rentalticket.css');
 
 mix.scripts([
@@ -162,6 +174,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/rentalticket.script.js'
 ], 'public/js/pages/rentalticket.js');
 
@@ -172,7 +186,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/paketticket.css');
 
 mix.scripts([
@@ -181,6 +196,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/paketticket.script.js'
 ], 'public/js/pages/paketticket.js');
 
@@ -191,7 +208,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/dataTables.bootstrap4.min.css'
 ], 'public/css/pages/kaiticket.css');
 
 mix.scripts([
@@ -200,6 +218,8 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/kaiticket.script.js'
 ], 'public/js/pages/kaiticket.js');
 
@@ -210,7 +230,8 @@ mix.scripts([
  */
 
 mix.styles([
-    'resources/assets/css/daterangepicker/daterangepicker.css'
+    'resources/assets/css/daterangepicker/daterangepicker.css',
+    'resources/assets/css/datatable/jquery.dataTables.min.css'
 ], 'public/css/pages/pelniticket.css');
 
 mix.scripts([
@@ -219,5 +240,7 @@ mix.scripts([
     'resources/assets/js/inputmask/inputmask/inputmask.extensions.js',
     'resources/assets/js/inputmask/inputmask/inputmask.numeric.extensions.js',
     'resources/assets/js/inputmask/inputmask/jquery.inputmask.js',
+    'resources/assets/js/datatable/jquery.dataTables.min.js',
+    'resources/assets/js/datatable/dataTables.bootstrap4.min.js',
     'resources/assets/js/pages/pelniticket.script.js'
 ], 'public/js/pages/pelniticket.js');

@@ -1,5 +1,7 @@
 "use strict";
 $(document).ready(function () {
+    $('#datatable').DataTable();
+
     $('#check_in').daterangepicker({
         singleDatePicker: true,
         locale: {

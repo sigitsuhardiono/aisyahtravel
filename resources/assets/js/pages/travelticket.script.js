@@ -1,5 +1,6 @@
 "use strict";
 $(document).ready(function () {
+    $('#datatable').DataTable();
     $('#date').daterangepicker({
         singleDatePicker: true,
         timePicker: true,

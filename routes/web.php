@@ -31,4 +31,8 @@ Route::get('/ticket/pelni', 'TicketController@pelni');
 Route::post('/ticket/savepelni', 'TicketController@savepelni');
 Route::get('/ticket/paket', 'TicketController@paket');
 Route::post('/ticket/savepaket', 'TicketController@savepaket');
+Route::get('/ticket/airline/delete/{id}', 'TicketController@deleteairline');
+Route::get('/ticket/drop/delete/{id}', 'TicketController@deletedrop');
+Route::get('/ticket/travel/delete/{id}', 'TicketController@deletetravel');
+Route::get('/ticket/hotel/delete/{id}', 'TicketController@deletehotel');
 

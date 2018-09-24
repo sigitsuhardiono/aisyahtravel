@@ -4,8 +4,8 @@
     <div class="row page-tilte align-items-center">
         <div class="col-md-auto">
             <a href="#" class="mt-3 d-md-none float-right toggle-controls"><span class="material-icons">keyboard_arrow_down</span></a>
-            <h1 class="weight-300 h3 title">KAI</h1>
-            <p class="text-muted m-0 desc">Halaman transaksi tiket KAI.</p>
+            <h1 class="weight-300 h3 title">PELNI</h1>
+            <p class="text-muted m-0 desc">Halaman transaksi tiket PELNI.</p>
         </div>
         <div class="col controls-wrapper mt-3 mt-md-0 d-none d-md-block ">
             <div class="controls d-flex justify-content-center justify-content-md-end">
@@ -83,9 +83,63 @@
                                 <label for="commission">Commission</label>
                                 <input type="text" class="form-control" name="commission" id="commission" data-inputmask="'alias': 'decimal', 'groupSeparator': ',', 'autoGroup': true" required>
                             </div>
+                        </div>
+                        <div class="form-row">
                             <div class="col-md-2 mb-3">
                                 <label for="payment">Payment</label>
-                                <input type="text" class="form-control" name="payment" id="payment" required>
+                                <select name="payment" id="payment" class="form-control" required>
+                                    <option value="">- Select Payment -</option>
+                                    <option value="BB/Hutang">BB/Hutang</option>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Debit">Debit</option>
+                                    <option value="TT">TT</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 mb-3" id="dataagen" style="display: none">
+                                <label for="agen">Agen</label>
+                                <input type="text" class="form-control" name="agen" id="agen">
+                            </div>
+                            <div class="col-sm-10" id="daftarbank" style="display: none">
+                                <label for="namabank">&nbsp;</label>
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-md-1 mt-2">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="BCA"
+                                                   value="BCA" checked="">
+                                            <label class="form-check-label" for="BCA">
+                                                BCA
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1 mt-2">
+                                            <input class="form-check-input" type="radio" name="gridRadios"
+                                                   id="Mandiri" value="Mandiri">
+                                            <label class="form-check-label" for="Mandiri">
+                                                Mandiri
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1 mt-2">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="BRI"
+                                                   value="BRI">
+                                            <label class="form-check-label" for="BRI">
+                                                BRI
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1 mt-2">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="BNI"
+                                                   value="BNI">
+                                            <label class="form-check-label" for="BNI">
+                                                BNI
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1  mt-2">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="Mega"
+                                                   value="Mega">
+                                            <label class="form-check-label" for="Mega">
+                                                Mega
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
@@ -95,7 +149,11 @@
                             </div>
                             <div class="col-md-2 mb-3">
                                 <label for="sales">Sales</label>
-                                <input type="text" class="form-control" name="sales" id="sales" required>
+                                <select name="sales" class="form-control" required>
+                                    @foreach($sales as $dtSales)
+                                        <option value="{{$dtSales->id}}">{{$dtSales->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-row">

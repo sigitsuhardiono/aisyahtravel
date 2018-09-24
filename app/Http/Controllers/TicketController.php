@@ -39,8 +39,9 @@ class TicketController extends Controller
 
     public function airline()
     {
-        $data['airlines'] = Airline::all();
-        $data['sales']    = Sales::all();
+        $data['airlines']  = Airline::all();
+        $data['sales']     = Sales::all();
+        $data['datatable'] = Airlineticket::all();
         return view('airlineticket', $data);
     }
 
@@ -51,7 +52,7 @@ class TicketController extends Controller
         if ($req->payment == "Debit" || $req->payment == "TT") {
             $bank = $req->gridRadios;
         }
-        $agen   = "";
+        $agen = "";
         if ($req->payment == "BB/Hutang") {
             $agen = $req->agen;
         }
@@ -79,19 +80,20 @@ class TicketController extends Controller
 
     public function drop()
     {
-        $data['drop'] = Drop::all();
-        $data['sales']    = Sales::all();
+        $data['drop']      = Drop::all();
+        $data['sales']     = Sales::all();
+        $data['datatable'] = Dropticket::all();
         return view('dropticket', $data);
     }
 
     public function savedrop(Request $req)
     {
-        $userId                     = Auth::user()->id;
+        $userId = Auth::user()->id;
         $bank   = "";
         if ($req->payment == "Debit" || $req->payment == "TT") {
             $bank = $req->gridRadios;
         }
-        $agen   = "";
+        $agen = "";
         if ($req->payment == "BB/Hutang") {
             $agen = $req->agen;
         }
@@ -118,19 +120,20 @@ class TicketController extends Controller
 
     public function travel()
     {
-        $data['travel'] = Travel::all();
-        $data['sales']    = Sales::all();
+        $data['travel']    = Travel::all();
+        $data['sales']     = Sales::all();
+        $data['datatable'] = Travelticket::all();
         return view('travelticket', $data);
     }
 
     public function savetravel(Request $req)
     {
-        $userId                       = Auth::user()->id;
+        $userId = Auth::user()->id;
         $bank   = "";
         if ($req->payment == "Debit" || $req->payment == "TT") {
             $bank = $req->gridRadios;
         }
-        $agen   = "";
+        $agen = "";
         if ($req->payment == "BB/Hutang") {
             $agen = $req->agen;
         }
@@ -159,18 +162,19 @@ class TicketController extends Controller
     public function hotel()
     {
         $data['system'] = Syshotel::all();
-        $data['sales']    = Sales::all();
+        $data['sales']  = Sales::all();
+        $data['datatable'] = Hotelticket::all();
         return view('hotelticket', $data);
     }
 
     public function savehotel(Request $req)
     {
-        $userId                  = Auth::user()->id;
+        $userId = Auth::user()->id;
         $bank   = "";
         if ($req->payment == "Debit" || $req->payment == "TT") {
             $bank = $req->gridRadios;
         }
-        $agen   = "";
+        $agen = "";
         if ($req->payment == "BB/Hutang") {
             $agen = $req->agen;
         }
@@ -187,8 +191,8 @@ class TicketController extends Controller
         $hotelTicket->nta        = $this->cleanNumeric($req->nta);
         $hotelTicket->commission = $this->cleanNumeric($req->commission);
         $hotelTicket->payment    = $req->payment;
-        $hotelTicket->bank           = $bank;
-        $hotelTicket->agen           = $agen;
+        $hotelTicket->bank       = $bank;
+        $hotelTicket->agen       = $agen;
         $hotelTicket->notes      = $req->notes;
         $hotelTicket->sales      = $req->sales;
         $hotelTicket->user_id    = $userId;
@@ -200,18 +204,18 @@ class TicketController extends Controller
     public function rental()
     {
         $data['rental'] = Rental::all();
-        $data['sales']    = Sales::all();
+        $data['sales']  = Sales::all();
         return view('rentalticket', $data);
     }
 
     public function saverental(Request $req)
     {
-        $userId                       = Auth::user()->id;
+        $userId = Auth::user()->id;
         $bank   = "";
         if ($req->payment == "Debit" || $req->payment == "TT") {
             $bank = $req->gridRadios;
         }
-        $agen   = "";
+        $agen = "";
         if ($req->payment == "BB/Hutang") {
             $agen = $req->agen;
         }
@@ -240,13 +244,21 @@ class TicketController extends Controller
     public function paket()
     {
         $data['paket'] = Paket::all();
-        $data['sales']    = Sales::all();
+        $data['sales'] = Sales::all();
         return view('paketticket', $data);
     }
 
     public function savepaket(Request $req)
     {
-        $userId                      = Auth::user()->id;
+        $userId = Auth::user()->id;
+        $bank   = "";
+        if ($req->payment == "Debit" || $req->payment == "TT") {
+            $bank = $req->gridRadios;
+        }
+        $agen = "";
+        if ($req->payment == "BB/Hutang") {
+            $agen = $req->agen;
+        }
         $paketTicket                 = new Paketticket();
         $paketTicket->name           = $req->name;
         $paketTicket->phone          = $req->phone;
@@ -259,6 +271,8 @@ class TicketController extends Controller
         $paketTicket->nta            = $this->cleanNumeric($req->nta);
         $paketTicket->commission     = $this->cleanNumeric($req->commission);
         $paketTicket->payment        = $req->payment;
+        $paketTicket->bank           = $bank;
+        $paketTicket->agen           = $agen;
         $paketTicket->notes          = $req->notes;
         $paketTicket->sales          = $req->sales;
         $paketTicket->user_id        = $userId;
@@ -270,13 +284,21 @@ class TicketController extends Controller
     public function kai()
     {
         $data['train'] = Train::all();
-        $data['sales']    = Sales::all();
+        $data['sales'] = Sales::all();
         return view('kaiticket', $data);
     }
 
     public function savekai(Request $req)
     {
-        $userId                      = Auth::user()->id;
+        $userId = Auth::user()->id;
+        $bank   = "";
+        if ($req->payment == "Debit" || $req->payment == "TT") {
+            $bank = $req->gridRadios;
+        }
+        $agen = "";
+        if ($req->payment == "BB/Hutang") {
+            $agen = $req->agen;
+        }
         $trainTicket                 = new Trainticket();
         $trainTicket->name           = $req->name;
         $trainTicket->phone          = $req->phone;
@@ -289,6 +311,8 @@ class TicketController extends Controller
         $trainTicket->nta            = $this->cleanNumeric($req->nta);
         $trainTicket->commission     = $this->cleanNumeric($req->commission);
         $trainTicket->payment        = $req->payment;
+        $trainTicket->bank           = $bank;
+        $trainTicket->agen           = $agen;
         $trainTicket->notes          = $req->notes;
         $trainTicket->sales          = $req->sales;
         $trainTicket->user_id        = $userId;
@@ -300,13 +324,21 @@ class TicketController extends Controller
     public function pelni()
     {
         $data['travel'] = TravelShip::all();
-        $data['sales']    = Sales::all();
+        $data['sales']  = Sales::all();
         return view('pelniticket', $data);
     }
 
     public function savepelni(Request $req)
     {
-        $userId                     = Auth::user()->id;
+        $userId = Auth::user()->id;
+        $bank   = "";
+        if ($req->payment == "Debit" || $req->payment == "TT") {
+            $bank = $req->gridRadios;
+        }
+        $agen = "";
+        if ($req->payment == "BB/Hutang") {
+            $agen = $req->agen;
+        }
         $shipTicket                 = new Shipticket();
         $shipTicket->name           = $req->name;
         $shipTicket->phone          = $req->phone;
@@ -319,12 +351,41 @@ class TicketController extends Controller
         $shipTicket->nta            = $this->cleanNumeric($req->nta);
         $shipTicket->commission     = $this->cleanNumeric($req->commission);
         $shipTicket->payment        = $req->payment;
+        $shipTicket->bank           = $bank;
+        $shipTicket->agen           = $agen;
         $shipTicket->notes          = $req->notes;
         $shipTicket->sales          = $req->sales;
         $shipTicket->user_id        = $userId;
         $shipTicket->save();
         $req->session()->flash('success', 'Data has been added');
         return redirect('ticket/pelni');
+    }
+
+    public function deleteairline($id)
+    {
+        $data = Airlineticket::where('id', $id)->first();
+        $data->delete();
+        return redirect('ticket/airline');
+    }
+    public function deletedrop($id)
+    {
+        $data = Dropticket::where('id', $id)->first();
+        $data->delete();
+        return redirect('ticket/drop');
+    }
+    
+    public function deletetravel($id)
+    {
+        $data = Travelticket::where('id', $id)->first();
+        $data->delete();
+        return redirect('ticket/travel');
+    }
+    
+    public function deletehotel($id)
+    {
+        $data = Hotelticket::where('id', $id)->first();
+        $data->delete();
+        return redirect('ticket/hotel');
     }
 
     private function cleanNumeric($a)

@@ -1,5 +1,6 @@
 "use strict";
 $(document).ready(function () {
+    $('#datatable').DataTable();
     $("#payment").change(function () {
         if($(this).val() == "BB/Hutang"){
             $("#dataagen").css("display","inline");
